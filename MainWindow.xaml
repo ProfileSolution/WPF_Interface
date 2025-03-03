@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp_practice.STL_loader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:helix="http://helix-toolkit.org/wpf"
+        xmlns:local="clr-namespace:WpfApp_practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Margin="159,0,0,0" Background="#D0F0C0" >
+            <helix:HelixViewport3D x:Name="viewPort3d" ZoomExtentsWhenLoaded="true" >
+                <!-- Remember to add light to the scene -->
+                <helix:DefaultLights/>
+            </helix:HelixViewport3D>
+        </Border>
+        <Button x:Name="Load_STL" Content="Load STL" Margin="23,24,659,357" RenderTransformOrigin="0.364,0.191" Click="Load_STL_Click" AutomationProperties.ItemType="" FontFamily="system-ui" FontWeight="Bold"/>
+        <Button x:Name="Load_STL_Copy" Content="Apply Boundary&#xD;&#xA; condition" Margin="23,106,659,274" RenderTransformOrigin="0.364,0.191" Click="Load_STL_Click" AutomationProperties.ItemType="" FontFamily="system-ui" FontWeight="Bold"/>
+        <Button x:Name="Load_STL_Copy1" Content="Meshing" Margin="23,189,659,191" RenderTransformOrigin="0.364,0.191" Click="Load_STL_Click" AutomationProperties.ItemType="" FontFamily="system-ui" FontWeight="Bold"/>
+        <Button x:Name="Load_STL_Copy2" Content="Solve" Margin="23,274,659,106" RenderTransformOrigin="0.364,0.191" Click="Load_STL_Click" AutomationProperties.ItemType="" FontFamily="system-ui" FontWeight="Bold"/>
+    </Grid>
+</Window>
